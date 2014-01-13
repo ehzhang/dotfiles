@@ -72,6 +72,8 @@ alias deploy_birthday='scp -r ~/birthday_principle/. ehzhang@athena.dialup.mit.e
 # Deploy the current folder to a folder in athena
 deploy_athena() {scp -r . ehzhang@athena.dialup.mit.edu:/mit/ehzhang/$* ;}
 
+activate() {source ~/virtualenv/$*/bin/activate}
+
 # Deploy appinventor to appengine
 alias deploy_ai='appcfg.sh -A aitestdesigner update ~/Documents/MIT/UROP/AppInventor/app-inventor-private/appinventor/appengine/build/war'
 
