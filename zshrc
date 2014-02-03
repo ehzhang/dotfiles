@@ -66,6 +66,9 @@ export PATH="/Library/Ruby/Gems/2.0.0:${PATH}"
 # Use powerline for zsh
 #. /usr/local/lib/python2.7/site-packages/powerline/bindings/zsh/powerline.zsh
 
+# Clear the screen
+alias c='clear'
+
 # Deploy birthday principle
 alias deploy_birthday='scp -r ~/birthday_principle/. ehzhang@athena.dialup.mit.edu:/mit/ehzhang/www/birthday_principle'
 

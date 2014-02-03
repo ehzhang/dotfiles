@@ -9,6 +9,9 @@ set mouse=a
 nmap <S-Enter> O<Esc>
 nmap <CR> o<Esc>
 
+" Enable syntax highlighing for .md files (Markdown)
+au BufRead,BufNewFile *.md set filetype=markdown
+
 " Check to make sure that files have different indentation
 filetype plugin indent on
 
