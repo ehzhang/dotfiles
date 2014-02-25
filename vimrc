@@ -5,6 +5,7 @@ colorscheme solarized
 set number
 set expandtab
 set autoindent
+set cursorline
 set mouse=a
 nmap <S-Enter> O<Esc>
 nmap <CR> o<Esc>
