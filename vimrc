@@ -25,12 +25,16 @@ Plugin 'kien/ctrlp.vim.git'
 " Powerline!
 Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 
+" Git-gutter!
+Plugin 'airblade/vim-gitgutter'
+
 call vundle#end()            " required
 filetype plugin indent on    " required
 
 syntax enable
 set background=dark
 colorscheme solarized
+hi clear SignColumn
 set number
 set cursorline
 set expandtab
