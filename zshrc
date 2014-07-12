@@ -80,4 +80,9 @@ activate() {source ~/virtualenv/$*/bin/activate}
 # Deploy appinventor to appengine
 alias deploy_ai='appcfg.sh -A aitestdesigner update ~/Documents/MIT/UROP/AppInventor/app-inventor-private/appinventor/appengine/build/war'
 
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"
+
+### Elastic Beanstalk
+export PATH=$PATH:/Users/Edwin/eb/linux/python2.7/
 
