@@ -44,16 +44,7 @@ plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
 
-# Customize to your needs...
-export PATH=$PATH:/Applications/AppInventor/commands-for-appinventor/:/Users/Edwin/appengine-java-sdk-1.8.0/bin:/usr/local/share/python:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
-
 export PATH="/usr/local/bin:$PATH"
-
-# Path for appengine stuff
-export PATH="/Users/Edwin/appengine-java-sdk-1.8.0/bin:${PATH}"
-
-# Use opython when executing code that requires orange
-alias opython='/Applications/Orange.app/Contents/MacOS/python'
 
 # Open macvim instead of default vim
 alias vim='mvim -v'
@@ -75,14 +66,7 @@ alias deploy_birthday='scp -r ~/birthday_principle/. ehzhang@athena.dialup.mit.e
 # Deploy the current folder to a folder in athena
 deploy_athena() {scp -r . ehzhang@athena.dialup.mit.edu:/mit/ehzhang/$* ;}
 
-activate() {source ~/virtualenv/$*/bin/activate}
-
-# Deploy appinventor to appengine
-alias deploy_ai='appcfg.sh -A aitestdesigner update ~/Documents/MIT/UROP/AppInventor/app-inventor-private/appinventor/appengine/build/war'
+alias activate='source venv/bin/activate'
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
-
-### Elastic Beanstalk
-export PATH=$PATH:/Users/Edwin/eb/linux/python2.7/
-

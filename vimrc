@@ -23,7 +23,7 @@ Plugin 'scrooloose/nerdtree.git'
 Plugin 'kien/ctrlp.vim.git'
 
 " Powerline!
-Plugin 'Lokaltog/vim-powerline'
+Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 
 call vundle#end()            " required
 filetype plugin indent on    " required
