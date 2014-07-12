@@ -1,11 +1,40 @@
-execute pathogen#infect()
+set nocompatible              " be iMproved, required
+filetype off                  " required
+
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+" " alternatively, pass a path where Vundle should install plugins
+" "call vundle#begin('~/some/path/here')
+
+" let Vundle manage Vundle, required
+Plugin 'gmarik/Vundle.vim'
+
+" Solarized Colors
+Plugin 'altercation/vim-colors-solarized.git'
+
+" Jedi-vim
+Plugin 'davidhalter/jedi-vim.git'
+
+" Nerdtree
+Plugin 'scrooloose/nerdtree.git'
+
+" Ctrl-P
+Plugin 'kien/ctrlp.vim.git'
+
+" Powerline!
+Plugin 'Lokaltog/vim-powerline'
+
+call vundle#end()            " required
+filetype plugin indent on    " required
+
 syntax enable
 set background=dark
 colorscheme solarized
 set number
+set cursorline
 set expandtab
 set autoindent
-set cursorline
 set mouse=a
 nmap <S-Enter> O<Esc>
 nmap <CR> o<Esc>
@@ -17,7 +46,6 @@ au BufRead,BufNewFile *.md set filetype=markdown
 filetype plugin indent on
 
 " Get powerline up an going
-set rtp+=/usr/local/lib/python2.7/site-packages/powerline/bindings/vim/
 set laststatus=2
 
 " Set incremental search!

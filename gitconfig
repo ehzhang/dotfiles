@@ -1,0 +1,24 @@
+[user]
+    name = Edwin Zhang
+    email = ehzhang@mit.edu
+[core]
+    editor = vim
+[push]
+    default = current
+[http]
+    sslVerify = true
+[color]
+    ui = true
+[alias]
+    ci = commit
+    co = checkout
+    br = branch
+    st = status
+    lp = log --pretty=oneline
+    ld = log --pretty=format:'%H - %an, %ar : %s'
+    lg = log --pretty=format:'%h - %an, %s' --graph --decorate --color
+    squash = "!f() { git checkout -B gerrit_temp && git reset --soft $1; }; f `git merge-base \"$1\" HEAD`"
+
+[branch "master"]
+    remote = origin
+    merge = refs/heads/master
