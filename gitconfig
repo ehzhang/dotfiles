@@ -3,6 +3,7 @@
     email = ehzhang@mit.edu
 [core]
     editor = vim
+	excludesfile = ~/.gitignore
 [push]
     default = current
 [http]
