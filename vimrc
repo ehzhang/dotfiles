@@ -28,6 +28,9 @@ Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 " Git-gutter!
 Plugin 'airblade/vim-gitgutter'
 
+" YouCompleteMe
+Plugin 'Valloric/YouCompleteMe'
+
 call vundle#end()            " required
 filetype plugin indent on    " required
 

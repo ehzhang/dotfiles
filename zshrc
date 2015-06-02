@@ -82,3 +82,7 @@ alias showFiles='defaults write com.apple.finder AppleShowAllFiles YES; killall 
 alias hideFiles='defaults write com.apple.finder AppleShowAllFiles NO; killall Finder /System/Library/CoreServices/Finder.app'
 
 alias chrome='open -a "Google Chrome"'
+
+alias startPostgres='postgres -D /usr/local/var/postgres'
+
+alias ios='open /Applications/Xcode.app/Contents/Developer/Applications/iOS\ Simulator.app'

@@ -2,7 +2,7 @@
     name = Edwin Zhang
     email = ehzhang@mit.edu
 [core]
-    editor = vim
+    editor = mvim -v
 	excludesfile = ~/.gitignore
 [push]
     default = current
