@@ -31,6 +31,22 @@ Plugin 'airblade/vim-gitgutter'
 " YouCompleteMe
 Plugin 'Valloric/YouCompleteMe'
 
+" Syntastic
+Plugin 'scrooloose/syntastic'
+
+" vim-fugitive
+Plugin 'tpope/vim-fugitive'
+
+" vim-better-whitespace
+Plugin 'ntpeters/vim-better-whitespace'
+
+" vim-jsx
+Plugin 'pangloss/vim-javascript'
+Plugin 'mxw/vim-jsx'
+
+" voom
+Plugin 'vim-scripts/VOoM'
+
 call vundle#end()            " required
 filetype plugin indent on    " required
 
@@ -75,3 +91,19 @@ map <S-Tab> :NERDTreeToggle<CR>
 set ts=4 sw=4 et
 let g:indent_guides_start_level = 2
 let g:indent_guides_guide_size = 1
+
+" Syntastic Settings
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+
+" 80 char limit
+set colorcolumn=80
+
+" CtrlP Ignore
+let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
