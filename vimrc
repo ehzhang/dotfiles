@@ -47,6 +47,9 @@ Plugin 'mxw/vim-jsx'
 " voom
 Plugin 'vim-scripts/VOoM'
 
+" auto-pairs
+Plugin 'jiangmiao/auto-pairs'
+
 call vundle#end()            " required
 filetype plugin indent on    " required
 

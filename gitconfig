@@ -14,10 +14,12 @@
     ci = commit
     co = checkout
     br = branch
-    st = status
-    lp = log --pretty=oneline
+    st = status --short --branch
+    lp = log -p
     ld = log --pretty=format:'%H - %an, %ar : %s'
     lg = log --pretty=format:'%h - %an, %s' --graph --decorate --color
+    di = diff
+    ds = diff --staged
     squash = "!f() { git checkout -B gerrit_temp && git reset --soft $1; }; f `git merge-base \"$1\" HEAD`"
 
 [branch "master"]
