@@ -1,6 +1,6 @@
 [user]
     name = Edwin Zhang
-    email = ehzhang@mit.edu
+    email = edwinhzhang@gmail.com
 [core]
     editor = mvim -v
 	excludesfile = ~/.gitignore

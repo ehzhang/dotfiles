@@ -49,9 +49,6 @@ export PATH="/usr/local/bin:$PATH"
 # Open macvim instead of default vim
 alias vim='mvim -v'
 
-# Connect to MIT's athena
-alias athena='ssh ehzhang@athena.dialup.mit.edu'
-
 export PATH="/Library/Ruby/Gems/2.0.0:${PATH}"
 
 # Use powerline for zsh
@@ -59,12 +56,6 @@ export PATH="/Library/Ruby/Gems/2.0.0:${PATH}"
 
 # Clear the screen
 alias c='clear'
-
-# Deploy birthday principle
-alias deploy_birthday='scp -r ~/birthday_principle/. ehzhang@athena.dialup.mit.edu:/mit/ehzhang/www/birthday_principle'
-
-# Deploy the current folder to a folder in athena
-deploy_athena() {scp -r . ehzhang@athena.dialup.mit.edu:/mit/ehzhang/$* ;}
 
 alias activate='source venv/bin/activate'
 
@@ -83,6 +74,4 @@ alias hideFiles='defaults write com.apple.finder AppleShowAllFiles NO; killall F
 
 alias chrome='open -a "Google Chrome"'
 
-alias startPostgres='postgres -D /usr/local/var/postgres'
-
-alias ios='open /Applications/Xcode.app/Contents/Developer/Applications/iOS\ Simulator.app'
+alias ios='open /Applications/Xcode.app/Contents/Developer/Applications/Simulator.app'

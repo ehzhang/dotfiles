@@ -32,7 +32,10 @@ Plugin 'airblade/vim-gitgutter'
 Plugin 'Valloric/YouCompleteMe'
 
 " Syntastic
-Plugin 'scrooloose/syntastic'
+" Plugin 'scrooloose/syntastic'
+
+" A.L.E
+Plugin 'w0rp/ale'
 
 " vim-fugitive
 Plugin 'tpope/vim-fugitive'
@@ -62,6 +65,7 @@ set cursorline
 set expandtab
 set autoindent
 set mouse=a
+set ttymouse=sgr
 nmap <S-Enter> O<Esc>
 nmap <CR> o<Esc>
 
@@ -105,8 +109,24 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
+let g:syntastic_javascript_checkers = ['eslint']
+" let g:syntastic_javascript_eslint_exe = '$(npm bin)/eslint'
+
+let g:javascript_plugin_jsdoc = 1
+
 " 80 char limit
 set colorcolumn=80
 
 " CtrlP Ignore
 let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
+
+" Fix gd for python
+nmap gd :let varname = '\<<C-R><C-W>\>'<CR>?\<def\><CR>/<C-R>=varname<CR><CR>
+
+" ale options
+let g:ale_statusline_format = ['⨉ %d', '⚠ %d', '⬥ ok']
+let g:ale_echo_msg_error_str = 'E'
+let g:ale_echo_msg_warning_str = 'W'
+let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
+
+set statusline=%{ALEGetStatusLine()}
