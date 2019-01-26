@@ -53,6 +53,15 @@ Plugin 'vim-scripts/VOoM'
 " auto-pairs
 Plugin 'jiangmiao/auto-pairs'
 
+" vim go
+Plugin 'fatih/vim-go'
+
+"typescript-vim
+Plugin 'leafgarland/typescript-vim'
+
+" graphql
+Plugin 'jparise/vim-graphql'
+
 call vundle#end()            " required
 filetype plugin indent on    " required
 

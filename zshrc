@@ -75,3 +75,22 @@ alias hideFiles='defaults write com.apple.finder AppleShowAllFiles NO; killall F
 alias chrome='open -a "Google Chrome"'
 
 alias ios='open /Applications/Xcode.app/Contents/Developer/Applications/Simulator.app'
+
+alias setup_backend="bash -c 'source ~/.profile && . ./setup.sh && exit'"
+
+# Prepare autojump
+[ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
+
+ulimit -n 65536 65536
+
+ssh-add ~/.ssh/*rsa
+eval "$(direnv hook zsh)"
+
+autoload bashcompinit
+bashcompinit
+source ~/co/backend/bin/taskrunner-completion.bash
+
+alias tr taskrunner
+
+alias gs='git st'
+
