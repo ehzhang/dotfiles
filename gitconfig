@@ -2,7 +2,7 @@
     name = Edwin Zhang
     email = edwinhzhang@gmail.com
 [core]
-    editor = mvim -v
+    editor = vim -v
 	excludesfile = ~/.gitignore
 [push]
     default = current
@@ -21,6 +21,7 @@
     di = diff
     ds = diff --staged
     squash = "!f() { git checkout -B gerrit_temp && git reset --soft $1; }; f `git merge-base \"$1\" HEAD`"
+    rom = rebase -i origin/master
 
 [branch "master"]
     remote = origin

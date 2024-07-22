@@ -13,32 +13,14 @@ Plugin 'gmarik/Vundle.vim'
 " Solarized Colors
 Plugin 'altercation/vim-colors-solarized.git'
 
-" Jedi-vim
-Plugin 'davidhalter/jedi-vim.git'
-
 " Nerdtree
 Plugin 'scrooloose/nerdtree.git'
 
 " Ctrl-P
 Plugin 'kien/ctrlp.vim.git'
 
-" Powerline!
-Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
-
 " Git-gutter!
 Plugin 'airblade/vim-gitgutter'
-
-" YouCompleteMe
-Plugin 'Valloric/YouCompleteMe'
-
-" Syntastic
-" Plugin 'scrooloose/syntastic'
-
-" A.L.E
-Plugin 'w0rp/ale'
-
-" vim-fugitive
-Plugin 'tpope/vim-fugitive'
 
 " vim-better-whitespace
 Plugin 'ntpeters/vim-better-whitespace'
@@ -49,9 +31,6 @@ Plugin 'mxw/vim-jsx'
 
 " voom
 Plugin 'vim-scripts/VOoM'
-
-" auto-pairs
-Plugin 'jiangmiao/auto-pairs'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -75,9 +54,6 @@ au BufRead,BufNewFile *.md set filetype=markdown
 " Check to make sure that files have different indentation
 filetype plugin indent on
 
-" Get powerline up an going
-set laststatus=2
-
 " Set incremental search!
 set incsearch
 " Highlight that shit!
@@ -99,19 +75,6 @@ set ts=4 sw=4 et
 let g:indent_guides_start_level = 2
 let g:indent_guides_guide_size = 1
 
-" Syntastic Settings
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
-
-let g:syntastic_javascript_checkers = ['eslint']
-" let g:syntastic_javascript_eslint_exe = '$(npm bin)/eslint'
-
 let g:javascript_plugin_jsdoc = 1
 
 " 80 char limit
@@ -123,10 +86,3 @@ let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
 " Fix gd for python
 nmap gd :let varname = '\<<C-R><C-W>\>'<CR>?\<def\><CR>/<C-R>=varname<CR><CR>
 
-" ale options
-let g:ale_statusline_format = ['⨉ %d', '⚠ %d', '⬥ ok']
-let g:ale_echo_msg_error_str = 'E'
-let g:ale_echo_msg_warning_str = 'W'
-let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
-
-set statusline=%{ALEGetStatusLine()}
